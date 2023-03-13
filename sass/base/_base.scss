@@ -1,0 +1,32 @@
+*,*::before,*::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+   
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1 rem = 10px;
+
+    @include responsive(tab-land){
+        font-size: 56.25%;
+    }
+
+    @include responsive(tab-port){
+        font-size: 50%;
+    }
+ 
+}
+
+
+body{
+    
+}
+
+*::selection{
+    background-color: $color-gray-dark;
+    color: #fff;
+}

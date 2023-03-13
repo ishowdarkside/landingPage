@@ -1,0 +1,11 @@
+{
+  "name": "rtm-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch:sass":"node-sass sass/main.scss style.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

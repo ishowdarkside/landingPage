@@ -1,0 +1,50 @@
+.container{
+    max-width: 120rem;
+    margin:0 auto;
+
+
+    @include responsive(tab-land){
+        padding: 0 2rem;
+    }
+}
+
+
+.mb-sm{
+    margin-bottom: 2rem;
+}
+
+.mb-md{
+    margin-bottom: 3rem;
+}
+
+.mb-bg{
+
+    margin-bottom: 5rem;
+}
+
+
+.mb-hg{
+    margin-bottom: 8rem;
+}
+
+
+
+//top
+
+.mt-sm{
+    margin-top: 2rem;
+}
+
+.mt-md{
+    margin-top: 3rem;
+}
+
+.mt-bg{
+
+    margin-top: 5rem;
+}
+
+
+.mt-hg{
+    margin-top: 8rem;
+}

@@ -1,0 +1,344 @@
+.header {
+  padding: 30rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    flex-grow: 1;
+  }
+
+  &__heading {
+    font-weight: 400;
+    font-size: 6rem;
+    font-family: $poppins;
+    text-align: center;
+    line-height: 1.2;
+
+    @include responsive-custom(31.25em) {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      line-height: 1.2;
+    }
+
+    @include responsive-custom(22.5em) {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-family: $poppins;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 2rem;
+    max-width: 60%;
+
+    margin: 0 auto;
+
+    @include responsive-custom(31.25em) {
+      max-width: 100%;
+    }
+  }
+
+  &__btn-wrap {
+    text-align: center;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    @include responsive-custom(22.5em) {
+      flex-direction: column;
+    }
+  }
+}
+
+.section__sc {
+  padding: 15rem 0;
+
+  .container {
+    transition: all 2s ease;
+    text-align: center;
+  }
+
+  &__txt {
+    max-width: 40%;
+
+    margin: 0 auto 5rem auto;
+
+    @include responsive-custom(53.75em) {
+      max-width: 100%;
+    }
+  }
+
+  &__grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+  }
+
+  &__grid-item {
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 4px rgba(#000, 50%);
+    &__star-wrap {
+      display: flex;
+      margin-bottom: 2rem;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: #facc15;
+      }
+    }
+
+    &__txt {
+      font-style: italic;
+    }
+  }
+}
+
+.section__features {
+  padding: 20rem 0;
+  background-color: #0b0b0f;
+
+  .container {
+    text-align: center;
+  }
+
+  &__grid__wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+  }
+
+  &__grid__item {
+    text-align: left;
+    padding: 4rem 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid $color-gray-light;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      fill: $color-gray-light;
+    }
+  }
+}
+
+.section__newsletter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include responsive(tab-port) {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  &__right {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include responsive(tab-port) {
+      display: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 7rem;
+    justify-content: center;
+    gap: 5rem;
+
+    @include responsive-custom(62.5em) {
+      padding: 3rem 0 0 3rem;
+    }
+
+    @include responsive(tab-port) {
+      padding: 10rem 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      gap: 2rem;
+
+      @include responsive(tab-port) {
+        justify-content: center;
+      }
+      input {
+        font-family: inherit;
+        width: 50%;
+        padding: 1.5rem 2rem;
+        border: 1px solid $color-blue-dark;
+        border-radius: 100px;
+
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: $color-blue-dark;
+        }
+
+        @include responsive-custom(62.5em) {
+          width: 80%;
+        }
+
+        @include responsive(tab-port) {
+          margin: 0 auto;
+          width: 70%;
+        }
+      }
+
+      .btn {
+        @include responsive(tab-port) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.section__pricing {
+  padding: 20rem 0;
+
+  @include responsive-custom(50em) {
+    padding: 10rem 0;
+  }
+  .heading-primary {
+    @include responsive-custom(50em) {
+      text-align: center;
+    }
+  }
+  &__grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include responsive-custom(50em) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__grid__item {
+    border-radius: 2rem;
+    border: 1px solid $color-blue-dark;
+    gap: 2rem;
+    padding: 5rem 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include responsive-custom(50em) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include responsive-custom(26.87em) {
+      width: 100%;
+    }
+
+    &__fill {
+      background-color: $color-blue-dark;
+      color: #fff;
+      border: none;
+      transform: translateY(-2rem);
+
+      @include responsive-custom(50em) {
+        transform: none;
+      }
+    }
+    &__price {
+      display: block;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+
+    &__list {
+      list-style: none;
+      &__item {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          height: 1.5rem;
+          align-self: flex-start;
+          margin-top: 0.5rem;
+          width: 1.5rem;
+          -webkit-mask-image: url(img/cross.svg);
+          mask-repeat: no-repeat;
+          mask-image: url(img/cross.svg);
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: $color-gray-dark;
+        }
+
+        &__white {
+          &::before {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section__products {
+  @include responsive-custom(50em) {
+    display: none;
+  }
+  .heading-primary {
+    max-width: 120rem;
+    margin: 0 auto;
+
+    text-align: right;
+
+    @include responsive(tab-land) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & > * {
+      background-color: $color-blue-dark;
+    }
+  }
+
+  &__grid__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    color: #fff;
+    font-family: $poppins;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include responsive(tab-land) {
+      font-size: 4rem;
+    }
+  }
+}
